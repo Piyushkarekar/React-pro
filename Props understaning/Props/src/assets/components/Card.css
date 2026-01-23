@@ -1,0 +1,24 @@
+.mainCard {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  background-color: rgb(255, 254, 252);
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.card img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
