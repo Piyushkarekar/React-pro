@@ -14,6 +14,8 @@
   padding: 20px;
   text-align: center;
   margin: 20px;
+  border:2px solid transparent;
+  transition: 0.3s;
 }
 
 .card img {
@@ -21,4 +23,12 @@
   width: 120px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.card:hover{
+  border: 5px solid black;
+  transition: 0.3s;
+  transform: scale(1.2);
+  background-color: black;
+  color: white;
 }
