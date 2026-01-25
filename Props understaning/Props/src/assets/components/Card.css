@@ -14,7 +14,7 @@
   padding: 20px;
   text-align: center;
   margin: 20px;
-  border:2px solid transparent;
+  border: 2px solid transparent;
   transition: 0.3s;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .card:hover{
-  border: 5px solid black;
+  border: 2px solid black;
   transition: 0.3s;
   transform: scale(1.2);
   background-color: black;
