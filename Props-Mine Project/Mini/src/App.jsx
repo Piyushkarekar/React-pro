@@ -5,7 +5,7 @@ const jobs = [
   {
     id: 1,
     companyName: "Google",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    companyLogo: "https://media.wired.com/photos/5926ffe47034dc5f91bed4e8/master/pass/google-logo.jpg",
     posted: "5 days ago",
     domain: "Frontend Development",
     tag1: "Full-time",
@@ -27,7 +27,7 @@ const jobs = [
   {
     id: 3,
     companyName: "Amazon",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    companyLogo: "https://1000logos.net/wp-content/uploads/2016/10/Amazon-logo-meaning.jpg",
     posted: "2 days ago",
     domain: "UI/UX Designer",
     tag1: "Full-time",
@@ -38,7 +38,7 @@ const jobs = [
   {
     id: 4,
     companyName: "Meta (Facebook)",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Meta_Platforms_Inc._logo.svg",
+    companyLogo: "https://png.pngtree.com/png-clipart/20180515/ourmid/pngtree-facebook-logo-facebook-icon-png-image_3566127.png",
     posted: "3 days ago",
     domain: "Data Analyst",
     tag1: "Part-time",
@@ -49,7 +49,7 @@ const jobs = [
   {
     id: 5,
     companyName: "Netflix",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+    companyLogo: "https://static.vecteezy.com/system/resources/previews/020/336/373/non_2x/netflix-logo-netflix-icon-free-free-vector.jpg",
     posted: "1 week ago",
     domain: "Frontend Development",
     tag1: "Full-time",
@@ -60,7 +60,7 @@ const jobs = [
   {
     id: 6,
     companyName: "Apple",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    companyLogo: "https://substackcdn.com/image/fetch/$s_!G1lk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg",
     posted: "6 days ago",
     domain: "Mobile App Developer",
     tag1: "Full-time",
@@ -71,7 +71,7 @@ const jobs = [
   {
     id: 7,
     companyName: "Adobe",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Adobe_logo.svg",
+    companyLogo: "https://i.pinimg.com/736x/56/3a/a2/563aa2189ef92dc242a7db5b91078804.jpg",
     posted: "4 days ago",
     domain: "Graphic Designer",
     tag1: "Part-time",
@@ -82,7 +82,7 @@ const jobs = [
   {
     id: 8,
     companyName: "Intel",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Intel-logo.svg",
+    companyLogo: "https://blog.logomaster.ai/hs-fs/hubfs/intel-logo-3.jpg?width=672&height=448&name=intel-logo-3.jpg",
     posted: "2 weeks ago",
     domain: "Hardware Engineer",
     tag1: "Full-time",
@@ -116,8 +116,21 @@ const jobs = [
 
 export const App = () => {
   return (
-    <div> 
-      <Card  />
+    <div className='parent'>
+      {jobs.map((job) => (
+        <Card 
+          key={job.id}
+          name={job.companyName}
+          logo={job.companyLogo}
+          post={job.posted}
+          tag1={job.tag1}
+          tag2={job.tag2}
+          pay={job.payPerHour}
+          domain={job.domain}
+          location={job.location}
+          
+        />
+      ))}
     </div>
   )
 }
